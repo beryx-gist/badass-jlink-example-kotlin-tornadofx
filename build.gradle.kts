@@ -6,7 +6,7 @@ plugins {
     kotlin("jvm") version "1.2.71"
     application
     id("com.zyxist.chainsaw") version "0.3.1"
-    id("org.beryx.jlink") version "2.0.0"
+    id("org.beryx.jlink") version "2.0.1"
 }
 
 val currentOS = org.gradle.internal.os.OperatingSystem.current()
