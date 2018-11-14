@@ -3,7 +3,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 
 plugins {
-    kotlin("jvm") version "1.3.0"
+    kotlin("jvm") version "1.3.10"
     application
     id("org.javamodularity.moduleplugin") version "1.1.1"
     id("org.beryx.jlink") version "2.1.3"
@@ -38,7 +38,9 @@ dependencies {
     implementation("org.openjfx:javafx-controls:${javaFxVersion}:${platform}")
     implementation("org.openjfx:javafx-fxml:${javaFxVersion}:${platform}")
     implementation("org.openjfx:javafx-graphics:${javaFxVersion}:${platform}")
-    implementation("no.tornado:tornadofx:1.7.17")
+    implementation("no.tornado:tornadofx:1.7.17") {
+        exclude("org.jetbrains.kotlin")
+    }
 }
 
 jlink{
