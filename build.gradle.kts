@@ -24,7 +24,7 @@ val compileJava: JavaCompile by tasks
 compileJava.destinationDir = compileKotlin.destinationDir
 
 application {
-    mainClassName = "org.beryx.jlink.test.kotlin.HelloWorldApp"
+    mainClassName = "test.kotlin/org.beryx.jlink.test.kotlin.HelloWorldApp"
 }
 
 repositories {
@@ -32,15 +32,14 @@ repositories {
 }
 
 dependencies {
-    implementation("org.jetbrains.kotlin:kotlin-stdlib:1.3.0")
+    implementation("org.jetbrains.kotlin:kotlin-stdlib:1.3.10")
+    implementation("org.jetbrains.kotlin:kotlin-reflect:1.3.10")
     implementation("org.openjfx:javafx-base:${javaFxVersion}:${platform}")
     implementation("org.openjfx:javafx-controls:${javaFxVersion}:${platform}")
     implementation("org.openjfx:javafx-fxml:${javaFxVersion}:${platform}")
     implementation("org.openjfx:javafx-graphics:${javaFxVersion}:${platform}")
     implementation("no.tornado:tornadofx:1.7.17")
 }
-
-javaModule.setName("test.kotlin")
 
 jlink{
     launcher (delegateClosureOf<LauncherData> {
