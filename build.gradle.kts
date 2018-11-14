@@ -5,7 +5,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
     kotlin("jvm") version "1.3.0"
     application
-    id("com.zyxist.chainsaw") version "0.3.1"
+    id("org.javamodularity.moduleplugin") version "1.1.1"
     id("org.beryx.jlink") version "2.1.3"
 }
 
