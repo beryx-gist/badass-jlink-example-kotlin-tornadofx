@@ -8,7 +8,6 @@ plugins {
     id("org.openjfx.javafxplugin") version "0.0.5"
     id("org.beryx.jlink") version "2.1.8"
 }
-val javaFxVersion = 11
 
 val compileKotlin: KotlinCompile by tasks
 val compileJava: JavaCompile by tasks
