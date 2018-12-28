@@ -6,7 +6,7 @@ plugins {
     kotlin("jvm") version "1.3.10"
     application
     id("org.openjfx.javafxplugin") version "0.0.5"
-    id("org.beryx.jlink") version "2.1.8"
+    id("org.beryx.jlink") version "2.3.0"
 }
 
 val compileKotlin: KotlinCompile by tasks
