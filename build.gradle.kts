@@ -6,7 +6,7 @@ plugins {
     kotlin("jvm") version "1.3.10"
     application
     id("org.openjfx.javafxplugin") version "0.0.5"
-    id("org.beryx.jlink") version "2.3.0"
+    id("org.beryx.jlink") version "2.4.0"
 }
 
 val compileKotlin: KotlinCompile by tasks
@@ -34,9 +34,9 @@ dependencies {
 }
 
 jlink{
-    launcher (delegateClosureOf<LauncherData> {
+    launcher {
         name = "hello"
-    })
+    }
     addExtraDependencies("javafx")
     imageZip.set(project.file("${project.buildDir}/image-zip/hello-image.zip"))
 }
